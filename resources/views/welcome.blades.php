@@ -130,3 +130,82 @@
         </div>
     </body>
 </html>
+WHO ARE WE?
+
+Definition of:-
+
+The broad mass base is an integrative revolutionary social-political entity; it is based on institutional, normative, national, programmatic, and modernity in discourse, practice, and behavior. It is governed by principles, values ​​and constitution, and a well-established scientific methodology.
+
+
+It works on:
+
+Eliminating marginalization, lifting injustice and restoring rights, while ending and combating all manifestations of negative discrimination.
+
+- Participation and work to establish and build the Sudanese state on modernist normative foundations, based on state federation and governance.
+
+Strengthening democracy and democratic action.
+
+Fulfilling the will of the people and serving them.
+ 
+Respecting the law and arbitrating the country's constitution to establish justice and consolidate the values ​​of justice.
+ 
+- Preserving rights and duties, and guaranteeing the freedoms restricted by the constitution.
+
+- Protecting the supreme sovereignty of the country, and working to maintain peace, security and stability.
+ 
+Building and developing the state and the people.
+
+Directing technology towards production to raise productivity in all professional sectors to present Sudan at the top of the producing countries.
+
+Training and qualifying young people in support of the project of making minds and building a specialized and distinguished national cadre.
+
+Taking care of generations, taking care of them scientifically and healthily, and building a peaceful, dear, healthy and tolerant society.
+
+- Upgrading the African continent and its peoples towards modernity and the transition from modern colonialism to a space of liberation and self-sovereignty.
+
+- Pushing the state to contribute to laying the foundations and laws that organize and manage the world in order to maintain balance, security and international stability, economically, politically and militarily.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The ten basic principles of a broad mass base
+
+
+1- The identity of the State of Sudan, with its internationally recognized geographical borders, with all its ethnic components, cultural diversity, languages ​​and religions, is Sudanese.
+
+2 - The independence and impartiality of the judiciary without being influenced by any party, regardless of its authority, after the complete separation between the three powers (legislative, judicial, and executive) is a recognized basic principle for building a state of institutions and the rule of law that must be included in the permanent constitution of the state.
+ 
+3- Ending injustice and marginalization, dismantling unilateral and ethnographic domination and preventing its establishment in the opposite direction, while addressing all the structural and structural imbalances of the state in all institutions and reformulating them on true and just national foundations, and building a single professional army with those national standards with a national creed that protects the citizen, the state and the constitution.
+
+4- Institutionalization and transparency with the principle of accountability, and true nationalism in offering, behavior and actual practice within the organization.
+
+5- The federation of the state, believing in what the people see through real representation through legitimate and official ways or what the people impose by any means they see fit.
+
+6- The unity of Sudan, the state and the people, along the lines of the free will of the citizens of each region voluntarily and freely, away from guardianship and false representation or the imposition of force of arms.
+
+7- The criterion of equal citizenship in all rights and duties within the Sudanese state is the birth within the Sudanese state in any of its regions, not the tribe or ethnicity.
+
+8- A free national economy away from external bequests, and dealing with the international community within the framework of integration based on common interests in development, and maintaining the sovereignty of the National Central Bank, free and independent from the grip of foreign policies.
+
+9- Limiting the role of the tribe and not involving it in any political or organizational work and placing it in the natural social path, criminalizing and refusing to deal on a tribal and ethnographic basis within the organization (while preserving the regional status legislated in the constitution), and adopting the principle of qualitative normativeness on the basis of competence, honesty and integrity in job tasks and organizational.
+
+10 - We believe in free democracy, democratic action and the peaceful transfer of power, while excluding the military institution from political action, and we reject and condemn military coups and foreign interference in the policies and affairs of the state.

@@ -13,8 +13,8 @@
 /*# sourceMappingURL=bootstrap.min.css.map */
 @font-face {
   font-family: "bootstrap-icons";
-  src: url("./fonts/bootstrap-icons.woff2?856008caa5eb66df68595e734e59580d") format("woff2"),
-url("./fonts/bootstrap-icons.woff?856008caa5eb66df68595e734e59580d") format("woff");
+  src: url("../fonts/bootstrap-icons.woff2?856008caa5eb66df68595e734e59580d") format("woff2"),
+url("../fonts/bootstrap-icons.woff?856008caa5eb66df68595e734e59580d") format("woff");
 }
 
 [class^="bi-"]::before,
@@ -3855,13 +3855,13 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.5s;
   z-index: 997;
   transition: all 0.5s;
-  background: rgba(1, 4, 136, 0.9);
+  background: rgb(2 161 75 / 86%);
 }
 #header.header-transparent {
   background: transparent;
 }
 #header.header-scrolled {
-  background: rgba(1, 4, 136, 0.9);
+  background: rgb(2 161 75 / 86%);
   height: 60px;
 }
 #header .logo h1 {
@@ -4420,7 +4420,7 @@ section {
   font-size: 14px;
 }
 .about .video-box {
-  background: url("../img/about.png") center center no-repeat;
+  background: url("../img/news.png") center center no-repeat;
   background-size: contain;
   min-height: 300px;
 }
@@ -5085,7 +5085,7 @@ section {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background: #010351;
+  background: rgb(2 161 75 / 86%);
   padding: 0 0 30px 0;
   color: #fff;
   font-size: 14px;
@@ -5095,7 +5095,7 @@ section {
 }
 #footer .footer-top .footer-info {
   margin-bottom: 15px;
-  background: #010246;
+  background: #1acc8d
   color: #fff;
   border-top: 4px solid #1acc8d;
   text-align: center;
