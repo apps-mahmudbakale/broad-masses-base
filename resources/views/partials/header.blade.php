@@ -3,7 +3,7 @@
     <div class="container d-flex align-items-center justify-content-between">
 
       <div class="logo">
-        <h1><a href="/"><span><img src="assets/img/BMB.png" alt=""> Broad Masses Base</span></a></h1>
+        <h1><a href="/"><span><img src="{{asset('assets/img/logo.png')}}" alt=""> Broad Masses Base</span></a></h1>
       </div>
 
       <nav id="navbar" class="navbar">

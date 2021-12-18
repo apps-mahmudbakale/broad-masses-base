@@ -10,12 +10,12 @@
             <h1>HOPE <span>FOR OUR LAND</span></h1>
             <h2 style="text-align: justify; font-family: Georgia, serif;">The broad mass base is an integrative revolutionary social-political entity; it is based on institutional, normative, national, programmatic, and modernity in discourse, practice, and behavior. It is governed by principles, values and constitution, and a well-established scientific methodology.</h2>
             <div class="text-center text-lg-start">
-              <a href="" class="btn-get-started scrollto">Join Us</a>
+              <a href="{{route('register')}}" class="btn-get-started scrollto">Join Us</a>
             </div>
           </div>
         </div>
         <div class="col-lg-4 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="300">
-          <img src="assets/img/BMB.png" class="img-fluid animated" alt="">
+          <img src="assets/img/logo.png" class="img-fluid animated" alt="">
         </div>
       </div>
     </div>
@@ -62,7 +62,7 @@
             <p>Fulfilling the will of the people and serving them.</p>
              
             <p>Respecting the law and arbitrating the country's constitution to establish justice and consolidate the values of justice.</p>
-            <p><a href="">Read More</a></p>
+            <p><a href="{{route('about')}}">Read More</a></p>
 
           </div>
         </div>

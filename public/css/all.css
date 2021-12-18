@@ -3865,7 +3865,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 60px;
 }
 #header .logo h1 {
-  font-size: 28px;
+  font-size: 23px;
   margin: 0;
   padding: 0;
   line-height: 1;
@@ -4152,7 +4152,7 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
   }
   #hero .hero-img img {
-    max-width: 50%;
+    max-width: 90%;
   }
   #hero h1 {
     font-size: 28px;
@@ -4167,7 +4167,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (max-width: 575px) {
   #hero .hero-img img {
-    width: 80%;
+    width: 90%;
   }
 }
 
