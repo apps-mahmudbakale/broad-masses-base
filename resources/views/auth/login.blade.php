@@ -29,7 +29,7 @@
                 <div class="col-12">
                   <label for="yourUsername" class="form-label">Username</label>
                   <div class="input-group has-validation">
-                    <span class="input-group-text" id="inputGroupPrepend">@</span>
+                    <span class="input-group-text" id="inputGroupPrepend"><i class="bi bi-at"></i></span>
                     <input type="email" name="email" class="form-control" id="yourUsername" required>
                     <div class="invalid-feedback">Please enter your username.</div>
                   </div>
@@ -37,7 +37,7 @@
 
                 <div class="col-12">
                      <div class="input-group has-validation">
-                    <span class="input-group-text" id="inputGroupPrepend"><i class="fa fa-lock"></i></span>
+                    <span class="input-group-text" id="inputGroupPrepend"><i class="bi bi-lock"></i></span>
                     <input type="password" name="password" class="form-control" id="yourPassword" required>
                     <div class="invalid-feedback">Please enter your password.</div>
                   </div>
