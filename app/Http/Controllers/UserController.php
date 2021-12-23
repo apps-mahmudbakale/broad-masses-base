@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\UserFormRequest;
 use App\Models\Member;
+use App\Models\Role;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -27,7 +29,9 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        $this->authorize('create-users');
+        $roles = Role::all()->pluck('name', 'id');
+        return view('users.create', compact('roles'));
     }
 
     /**
@@ -36,9 +40,12 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(UserFormRequest $request)
     {
-        //
+        $user = User::create($request->all());
+        $user->roles()->sync($request->input('roles', []));
+
+        return redirect()->route('users.index')->with('success', 'User Added');
     }
 
 
@@ -79,7 +86,7 @@ class UserController extends Controller
                 'acknowledgement' => $request->acknowledgement
         ]);
 
-        return redirect()->route('register')->with('success', 'Registration Success');
+        return redirect('/reg_mail.php?mail='.$request->email);
 
         
     }
@@ -101,9 +108,17 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(User $user)
     {
-        //
+        $this->authorize('update-users');
+
+        dd($user);
+
+        // $roles = Role::all()->pluck('name', 'id');
+
+        // $user->load('roles');
+
+        // return view('users.edit', compact('roles', $roles, 'user', $user));
     }
 
     /**

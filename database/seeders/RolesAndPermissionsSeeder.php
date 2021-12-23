@@ -28,6 +28,7 @@ class RolesAndPermissionsSeeder extends Seeder
         $roles = [
             'admin',
             'user',
+            'member',
         ];
         $entities = [
             'users',

@@ -14,7 +14,11 @@ class RoleController extends Controller
      */
     public function index()
     {
-        //
+        $this->authorize('read-roles');
+
+        $roles = Role::all();
+
+        return view('roles.index');
     }
 
     /**

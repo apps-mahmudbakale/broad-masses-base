@@ -22,9 +22,7 @@
   <section class="inner-page">
     <div class="container">
       @if(Session::has('success'))
-      <div class="alert alert-success">
-        The Registration has been successful Your Application is being Reviewed by the Administration
-      </div>
+        @include('partials.reg_success')
       @else
       <p style="text-align: justify;">
        Dear Sudanese citizen,  Hello and welcome to the Broad Masses Base, your political incubator , social and cultural incubator towards aspiring to chart and sign a true democratic modern future to build a democratic homeland that accommodates everyone enjoying security, peace, stability, freedom, justice, prosperity, development and leadership.Dear citizen, before filling out the registration form, make sure that you read the conditions of registration and joining carefully: <a href="">Terms & Conditions</a>
