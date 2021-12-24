@@ -145,6 +145,29 @@
             </div>
           </div>
 
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="450">
+              <a href="assets/img/gallery/gallery-9.jpg" class="gallery-lightbox">
+                <img src="assets/img/gallery/gallery-9.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="450">
+              <a href="assets/img/gallery/gallery-10.jpg" class="gallery-lightbox">
+                <img src="assets/img/gallery/gallery-10.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="450">
+              <a href="assets/img/gallery/gallery-11.jpg" class="gallery-lightbox">
+                <img src="assets/img/gallery/gallery-11.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
         </div>
 
       </div>

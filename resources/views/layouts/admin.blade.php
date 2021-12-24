@@ -22,5 +22,8 @@
     @yield('content')
   @include('partials.adminfooter')
   <script src="{{ asset('js/admin.js') }}"></script>
+  <form id="logoutform" action="{{ route('logout') }}" method="POST" style="display: none;">
+      {{ csrf_field() }}
+    </form>
 </body>
 </html>

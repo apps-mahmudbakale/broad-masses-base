@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\UserFormRequest;
+use App\Http\Requests\UserUpdateFormRequest;
 use App\Models\Member;
 use App\Models\Role;
 use App\Models\User;
@@ -18,7 +19,7 @@ class UserController extends Controller
     public function index()
     {
         $this->authorize('read-users');
-        $users = User::all();
+        $users = User::with('roles')->get();
         return view('users.index', compact('users'));
     }
 
@@ -57,6 +58,7 @@ class UserController extends Controller
                 'email' => $request->email
         ]);
 
+        $user->assignRole('member');
 
         $member = Member::create([
                 'user_id' => $user->id,
@@ -91,15 +93,28 @@ class UserController extends Controller
         
     }
 
+    public function sendmail($value='')
+    {
+        return redirect()->route('register')->with('success');
+    }
+
+
+    public function reg_mail_failed()
+    {
+        return redirect()->route('register')->with('success');
+    }
+
     /**
      * Display the specified resource.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(User $user)
     {
-        //
+        $this->authorize('read-users');
+
+        return view('users.show', compact('user'));
     }
 
     /**
@@ -112,13 +127,13 @@ class UserController extends Controller
     {
         $this->authorize('update-users');
 
-        dd($user);
+        // dd($user);
 
-        // $roles = Role::all()->pluck('name', 'id');
+        $roles = Role::all()->pluck('name', 'id');
 
-        // $user->load('roles');
+        $user->load('roles');
 
-        // return view('users.edit', compact('roles', $roles, 'user', $user));
+        return view('users.edit', compact('roles', $roles, 'user', $user));
     }
 
     /**
@@ -128,9 +143,14 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UserUpdateFormRequest $request, User $user)
     {
-        //
+       $this->authorize('update-users');
+
+        $user->update($request->all());
+        $user->roles()->sync($request->input('roles', []));
+
+        return redirect()->route('admin.users.index')->with('User Updated');
     }
 
     /**

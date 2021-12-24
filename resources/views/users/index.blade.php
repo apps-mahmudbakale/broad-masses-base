@@ -43,7 +43,7 @@
 	                  <td>{{$user->email}}</td>
 	                  <td>
 	                  	@foreach($user->roles as $key => $role)
-	                  	<span class="badge badge-success">{{ $role->name }}</span>
+	                  	<span class="badge rounded-pill bg-success">{{ $role->name }}</span>
 	                  	@endforeach
 	                  </td>
 	                  <td class="btn-group">

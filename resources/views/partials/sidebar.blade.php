@@ -21,7 +21,7 @@
             </a>
           </li>
           <li>
-            <a href="components-accordion.html">
+            <a href="{{route('admin.roles.index')}}">
               <i class="bi bi-circle"></i><span>Roles</span>
             </a>
           </li>
@@ -29,7 +29,7 @@
       </li><!-- End Components Nav -->
       @endcan
       <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-login.html">
+        <a class="nav-link collapsed" href="" onclick="event.preventDefault(); document.getElementById('logoutform').submit();">
           <i class="bi bi-box-arrow-in-right"></i>
           <span>Logout</span>
         </a>

@@ -1,7 +1,5 @@
 <?php 
-echo $email = $_GET['mail'];
- 
-$message = '<style>
+ $message = '<style>
  @media only screen and (max-width: 620px) {
    table.body h1 {
      font-size: 28px !important;
@@ -111,7 +109,7 @@ $message = '<style>
                    <table role="presentation" border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;" width="100%">
                      <tr>
                        <td style="font-family: sans-serif; font-size: 14px; vertical-align: top;" valign="top">
-                         <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; margin-bottom: 15px;">Hi there,</p>
+                         <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; margin-bottom: 15px;">Hi Welcome!,</p>
                          <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; margin-bottom: 15px;">Sometimes you just want to send a simple HTML email with a simple design and clear call to action. This is it.</p>
                          <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="btn btn-primary" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; box-sizing: border-box; width: 100%;" width="100%">
                            <tbody>
@@ -166,6 +164,20 @@ $message = '<style>
    </body>
  </html>';
 
- echo $message;
+      $to = strip_tags($_GET['mail']);
+      $from = 'no-Reply@broadmassesbase.com';
+      
+      $subject = 'Website Change Reqest';
+      
+      $headers = "From: " . $from . "\r\n";
+      $headers .= "Reply-To: ". strip_tags($from) . "\r\n";
+      $headers .= "MIME-Version: 1.0\r\n";
+      $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+
+            if (mail($to, $subject, $message, $headers)) {
+              header('/sendmail');
+            } else {
+               header('/reg_mail_failed');
+            }
 
  ?>
