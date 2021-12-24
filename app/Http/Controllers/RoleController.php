@@ -20,7 +20,7 @@ class RoleController extends Controller
     {
         $this->authorize('read-roles');
 
-        $roles = Role::all();
+        $roles = Role::with('permissions')->get();
         return view('roles.index', compact('roles', $roles));
     }
 

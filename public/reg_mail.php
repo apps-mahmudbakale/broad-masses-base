@@ -175,9 +175,9 @@
       $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 
             if (mail($to, $subject, $message, $headers)) {
-              header('/sendmail');
+              header('location:/sendmail');
             } else {
-               header('/reg_mail_failed');
+               header('location:/reg_mail_failed');
             }
 
  ?>

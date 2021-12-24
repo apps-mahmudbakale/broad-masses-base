@@ -28,6 +28,14 @@
         </ul>
       </li><!-- End Components Nav -->
       @endcan
+      @can('read-users')
+       <li class="nav-item">
+        <a class="nav-link collapsed" href="{{route('admin.members.index')}}">
+          <i class="bi bi-people"></i>
+          <span>Members</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+      @endcan
       <li class="nav-item">
         <a class="nav-link collapsed" href="" onclick="event.preventDefault(); document.getElementById('logoutform').submit();">
           <i class="bi bi-box-arrow-in-right"></i>

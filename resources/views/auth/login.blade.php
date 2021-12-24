@@ -61,7 +61,7 @@
           </div>
 
           <div class="credits">
-            Designed by <a href="">Ihmami Tech Solutions</a>
+            Designed by <a href="">Bnetworks Tech Solutions</a>
           </div>
 
         </div>
