@@ -19,7 +19,7 @@ class UserController extends Controller
     public function index()
     {
         $this->authorize('read-users');
-        $users = User::with('roles')->get();
+        $users = User::all();
         return view('users.index', compact('users'));
     }
 

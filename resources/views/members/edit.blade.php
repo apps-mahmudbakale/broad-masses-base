@@ -10,7 +10,7 @@
 	      <ol class="breadcrumb">
 	        <li class="breadcrumb-item"><a href="{{route('admin.dashboard')}}">Dashboard</a></li>
 	        <li class="breadcrumb-item"><a href="{{route('admin.users.index')}}">Users</a></li>
-	        <li class="breadcrumb-item active">Update User</li>
+	        <li class="breadcrumb-item active">Edit User</li>
 	      </ol>
 	    </nav>
 	  </div><!-- End Page Title -->
@@ -20,7 +20,7 @@
 	      <div class="col-lg-12">
 	      		<div class="card">
 	      		  <div class="card-body">
-	      		    <h5 class="card-title">Update User</h5>
+	      		    <h5 class="card-title">Edit User</h5>
 	      		    <!-- No Labels Form -->
 	      		    <form  action="{{route('admin.users.update', $user->id)}}" method="POST" class="row g-3">
 	      		    	@csrf

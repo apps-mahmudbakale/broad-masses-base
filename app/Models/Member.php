@@ -36,4 +36,10 @@ class Member extends Model
         'yourself',
         'acknowledgement'
     ];
+
+
+    public function user()
+    {
+        return $this->hasOne(User::class);
+    }
 }

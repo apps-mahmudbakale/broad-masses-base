@@ -33,8 +33,8 @@ class RolesAndPermissionsSeeder extends Seeder
         $entities = [
             'users',
             'roles',
-            'members'
-            'approve',
+            'members',
+            'approve'
            
         ];
 

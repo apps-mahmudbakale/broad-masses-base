@@ -14,7 +14,11 @@ class MemberController extends Controller
      */
     public function index()
     {
-        //
+        $this->authorize('read-members');
+
+        $members = Member::all();
+
+        return view('members.index', compact('members'));
     }
 
     /**
