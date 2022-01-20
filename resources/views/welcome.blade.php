@@ -2,7 +2,25 @@
     @section('content')
   <!-- ======= Hero Section ======= -->
   <section id="hero">
+     <div class="container" style="
+    border-bottom: 2px solid;
+    border-top: 2px solid;
+    background: #ffff;
+    margin-top: -58px;
+">
+          <nav id="navbar" class="navbar">
+        <ul style="color: white; font-weight: 700;">
+          <li style="margin-right: 450px"><img src="{{asset('img/flag.png')}}" alt="" width="100" height="50"></li>
+          <li><i class="fa fa-phone-square"></i> Hotline: 090668888866</li>
+        <li><a href="#" class="twitter"><i class="bx bxl-twitter"></i></a></li>
+        <li><a href="#" class="facebook"><i class="bx bxl-facebook"></i></a></li>
+        <li><a href="#" class="instagram"><i class="bx bxl-instagram"></i></a></li>
+        <li><a href="#" class="google-plus"><i class="bx bxl-skype"></i></a></li>
+        <li><a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a></li>
+        </ul>
+          </nav><!-- .navbar -->
 
+        </div>
     <div class="container">
       <div class="row justify-content-between">
         <div class="col-lg-7 pt-5 pt-lg-0 order-2 order-lg-1 d-flex align-items-center">
@@ -173,7 +191,7 @@
       </div>
     </section><!-- End Gallery Section -->
 
-    <!-- ======= Team Section ======= -->
+{{--     <!-- ======= Team Section ======= -->
     <section id="team" class="team">
       <div class="container">
 
@@ -251,7 +269,7 @@
         </div>
 
       </div>
-    </section><!-- End Team Section -->
+    </section><!-- End Team Section --> --}}
     <!-- ======= Support Section ======= -->
     <section id="faq" class="faq section-bg">
       <div class="container">
