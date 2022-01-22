@@ -8,8 +8,8 @@
 
         <nav id="navbar" class="navbar">
           <ul>
-            <li><a class="nav-link scrollto" href="index.php#hero"><i class="fa fa-home"></i> Home</a></li>
-            <li><a class="nav-link scrollto" href="index.php#about"><i class="fa fa-question-circle"></i>  About</a></li>
+            <li><a class="nav-link scrollto" href="{{route('welcome')}}"><i class="fa fa-home"></i> Home</a></li>
+            <li><a class="nav-link scrollto" href="{{route('about')}}"><i class="fa fa-question-circle"></i>  About</a></li>
            <li class="dropdown"><a href="#"><span><i class="fa fa-clock"></i> Activities & Programs</span> <i class="fa fa-chevron-down"></i></a>
              <ul>
                <li><a href="#">Seminars</a></li>
@@ -36,10 +36,7 @@
                <li><a href="#">Drop Down 4</a></li>
              </ul>
            </li>
-           {{--  <li><a class="nav-link scrollto" href="#gallery">Gallery</a></li>
-             <li><a class="nav-link scrollto" href="#gallery">Gallery</a></li>
-              <li><a class="nav-link scrollto" href="#gallery">Gallery</a></li> --}}
-            <li><a class="nav-link scrollto" href="index.php#team">Team</a></li>
+            <li><a class="nav-link scrollto" href="#gallery">Gallery</a></li>
             <li><a class="nav-link scrollto" href="index.php#contact">Contact</a></li>
           </ul>
           <i class="bi bi-list mobile-nav-toggle"></i>

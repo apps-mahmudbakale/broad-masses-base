@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 
 Route::get('/about', function () {
     return view('about');
@@ -42,9 +42,11 @@ Route::get('/reg_mail_failed', [UserController::class, 'reg_mail_failed']);
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['auth']], function ()
 {
     Route::get('/', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
+    Route::get('/approve/{id}', [UserController::class, 'approve'])->name('approve');
     Route::resource('users', UserController::class);
     Route::resource('roles', RoleController::class);
     Route::resource('members', MemberController::class);
+
 });
 
 

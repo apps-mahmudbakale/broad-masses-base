@@ -5,12 +5,12 @@
 	<main id="main" class="main">
 
 	  <div class="pagetitle">
-	    <h1>View User</h1>
+	    <h1>View Member</h1>
 	    <nav>
 	      <ol class="breadcrumb">
 	        <li class="breadcrumb-item"><a href="{{route('admin.dashboard')}}">Dashboard</a></li>
-	        <li class="breadcrumb-item"><a href="{{route('admin.users.index')}}">Users</a></li>
-	        <li class="breadcrumb-item active">View User</li>
+	        <li class="breadcrumb-item"><a href="{{route('admin.users.index')}}">UMember</a></li>
+	        <li class="breadcrumb-item active">View Member</li>
 	      </ol>
 	    </nav>
 	  </div><!-- End Page Title -->
@@ -22,8 +22,8 @@
 	            <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
 
 	              <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-	              <h2>{{$user->name}}</h2>
-	              <h3>{{$user->role}}</h3>
+	              <h2>{{$member->user->name}}</h2>
+	              <h3>{{$member->phone}}</h3>
 {{-- 	              <div class="social-links mt-2">
 	                <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
 	                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
@@ -43,148 +43,155 @@
 	              <ul class="nav nav-tabs nav-tabs-bordered">
 
 	                <li class="nav-item">
-	                  <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#profile-overview"> User Deatails</button>
+	                  <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#profile-overview"> Member Deatails</button>
 	                </li>
 
 	                <li class="nav-item">
-	                  <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-edit">Edit User</button>
+	                  <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-edit">Other Details</button>
+	                </li>
+	                <li class="nav-item">
+	                  <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-approve">Approve Member</button>
 	                </li>
 	              </ul>
 	              <div class="tab-content pt-2">
 
 	                <div class="tab-pane fade show active profile-overview" id="profile-overview">
-	                  <h5 class="card-title">User Details</h5>
+	                  <h5 class="card-title">Member Details</h5>
 
 	                  <div class="row">
-	                    <div class="col-lg-3 col-md-4 label ">Full Name</div>
-	                    <div class="col-lg-9 col-md-8">Kevin Anderson</div>
-	                  </div>
-
-	                  <div class="row">
-	                    <div class="col-lg-3 col-md-4 label">Company</div>
-	                    <div class="col-lg-9 col-md-8">Lueilwitz, Wisoky and Leuschke</div>
-	                  </div>
-
-	                  <div class="row">
-	                    <div class="col-lg-3 col-md-4 label">Job</div>
-	                    <div class="col-lg-9 col-md-8">Web Designer</div>
-	                  </div>
-
-	                  <div class="row">
-	                    <div class="col-lg-3 col-md-4 label">Country</div>
-	                    <div class="col-lg-9 col-md-8">USA</div>
-	                  </div>
-
-	                  <div class="row">
-	                    <div class="col-lg-3 col-md-4 label">Address</div>
-	                    <div class="col-lg-9 col-md-8">A108 Adam Street, New York, NY 535022</div>
-	                  </div>
-
-	                  <div class="row">
-	                    <div class="col-lg-3 col-md-4 label">Phone</div>
-	                    <div class="col-lg-9 col-md-8">(436) 486-3538 x29071</div>
+	                    <div class="col-lg-3 col-md-4 label ">Fullname</div>
+	                    <div class="col-lg-9 col-md-8">{{$member->user->name}}</div>
 	                  </div>
 
 	                  <div class="row">
 	                    <div class="col-lg-3 col-md-4 label">Email</div>
-	                    <div class="col-lg-9 col-md-8">k.anderson@example.com</div>
+	                    <div class="col-lg-9 col-md-8">{{$member->user->email}}</div>
+	                  </div>
+
+	                  <div class="row">
+	                    <div class="col-lg-3 col-md-4 label">Mobile Phone</div>
+	                    <div class="col-lg-9 col-md-8">{{$member->phone}}</div>
+	                  </div>
+
+	                  <div class="row">
+	                    <div class="col-lg-3 col-md-4 label">Date of Birth</div>
+	                    <div class="col-lg-9 col-md-8">{{$member->date_of_birth}}</div>
+	                  </div>
+
+	                  <div class="row">
+	                    <div class="col-lg-3 col-md-4 label">Place of Birth</div>
+	                    <div class="col-lg-9 col-md-8">{{$member->place_of_birth}}</div>
+	                  </div>
+
+	                  <div class="row">
+	                    <div class="col-lg-3 col-md-4 label">Current Residence</div>
+	                    <div class="col-lg-9 col-md-8">{{$member->current_residence}}</div>
+	                  </div>
+
+	                  <div class="row">
+	                    <div class="col-lg-3 col-md-4 label">Profession</div>
+	                    <div class="col-lg-9 col-md-8">{{$member->profession}}</div>
 	                  </div>
 
 	                </div>
 
-	                <div class="tab-pane fade profile-edit pt-3" id="profile-edit">
+	                <div class="tab-pane fade profile-overview" id="profile-edit">
+	                  <h5 class="card-title">Other Details</h5>
 
-	                  <!-- Profile Edit Form -->
-	                  <form> 
-	                   <div class="row mb-3">
-	                      <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Full Name</label>
-	                      <div class="col-md-8 col-lg-9">
-	                        <input name="fullName" type="text" class="form-control" id="fullName" value="Kevin Anderson">
-	                      </div>
-	                    </div>
+	                  <div class="row">
+	                    <div class="col-lg-4 col-md-4 label ">Passport No</div>
+	                    <div class="col-lg-8 col-md-8">{{$member->passport_no}}</div>
+	                  </div>
 
-	                    <div class="row mb-3">
-	                      <label for="about" class="col-md-4 col-lg-3 col-form-label">About</label>
-	                      <div class="col-md-8 col-lg-9">
-	                        <textarea name="about" class="form-control" id="about" style="height: 100px">Sunt est soluta temporibus accusantium neque nam maiores cumque temporibus. Tempora libero non est unde veniam est qui dolor. Ut sunt iure rerum quae quisquam autem eveniet perspiciatis odit. Fuga sequi sed ea saepe at unde.</textarea>
-	                      </div>
-	                    </div>
+	                  <div class="row">
+	                    <div class="col-lg-4 col-md-4 label">Qualification</div>
+	                    <div class="col-lg-8 col-md-8">{{$member->qualification}}</div>
+	                  </div>
 
-	                    <div class="row mb-3">
-	                      <label for="company" class="col-md-4 col-lg-3 col-form-label">Company</label>
-	                      <div class="col-md-8 col-lg-9">
-	                        <input name="company" type="text" class="form-control" id="company" value="Lueilwitz, Wisoky and Leuschke">
-	                      </div>
-	                    </div>
+	                  <div class="row">
+	                    <div class="col-lg-4 col-md-4 label">Job</div>
+	                    <div class="col-lg-8 col-md-8">{{$member->job}}</div>
+	                  </div>
 
-	                    <div class="row mb-3">
-	                      <label for="Job" class="col-md-4 col-lg-3 col-form-label">Job</label>
-	                      <div class="col-md-8 col-lg-9">
-	                        <input name="job" type="text" class="form-control" id="Job" value="Web Designer">
-	                      </div>
-	                    </div>
+	                  <div class="row">
+	                    <div class="col-lg-4 col-md-4 label">Fixed Phone</div>
+	                    <div class="col-lg-8 col-md-8">{{$member->fixed_phone}}</div>
+	                  </div>
 
-	                    <div class="row mb-3">
-	                      <label for="Country" class="col-md-4 col-lg-3 col-form-label">Country</label>
-	                      <div class="col-md-8 col-lg-9">
-	                        <input name="country" type="text" class="form-control" id="Country" value="USA">
-	                      </div>
-	                    </div>
+	                  <div class="row">
+	                    <div class="col-lg-4 col-md-4 label">Skills</div>
+	                    <div class="col-lg-8 col-md-8">{{$member->skills}}</div>
+	                  </div>
 
-	                    <div class="row mb-3">
-	                      <label for="Address" class="col-md-4 col-lg-3 col-form-label">Address</label>
-	                      <div class="col-md-8 col-lg-9">
-	                        <input name="address" type="text" class="form-control" id="Address" value="A108 Adam Street, New York, NY 535022">
-	                      </div>
-	                    </div>
+	                  <div class="row">
+	                    <div class="col-lg-4 col-md-4 label">Hobby</div>
+	                    <div class="col-lg-8 col-md-8">{{$member->hobby}}</div>
+	                  </div>
 
-	                    <div class="row mb-3">
-	                      <label for="Phone" class="col-md-4 col-lg-3 col-form-label">Phone</label>
-	                      <div class="col-md-8 col-lg-9">
-	                        <input name="phone" type="text" class="form-control" id="Phone" value="(436) 486-3538 x29071">
-	                      </div>
-	                    </div>
+	                  <div class="row">
+	                    <div class="col-lg-4 col-md-4 label">Languages</div>
+	                    <div class="col-lg-8 col-md-8">{{$member->languages}}</div>
+	                  </div>
 
-	                    <div class="row mb-3">
-	                      <label for="Email" class="col-md-4 col-lg-3 col-form-label">Email</label>
-	                      <div class="col-md-8 col-lg-9">
-	                        <input name="email" type="email" class="form-control" id="Email" value="k.anderson@example.com">
-	                      </div>
-	                    </div>
+	                  <div class="row">
+	                    <div class="col-lg-4 col-md-4 label">Experiences</div>
+	                    <div class="col-lg-8 col-md-8">{{$member->experience}}</div>
+	                  </div>
 
-	                    <div class="row mb-3">
-	                      <label for="Twitter" class="col-md-4 col-lg-3 col-form-label">Twitter Profile</label>
-	                      <div class="col-md-8 col-lg-9">
-	                        <input name="twitter" type="text" class="form-control" id="Twitter" value="https://twitter.com/#">
-	                      </div>
-	                    </div>
+	                   <div class="row">
+	                    <div class="col-lg-4 col-md-4 label">Achivements</div>
+	                    <div class="col-lg-8 col-md-8">{{$member->achievements}}</div>
+	                  </div>
 
-	                    <div class="row mb-3">
-	                      <label for="Facebook" class="col-md-4 col-lg-3 col-form-label">Facebook Profile</label>
-	                      <div class="col-md-8 col-lg-9">
-	                        <input name="facebook" type="text" class="form-control" id="Facebook" value="https://facebook.com/#">
-	                      </div>
-	                    </div>
+	                   <div class="row">
+	                    <div class="col-lg-4 col-md-4 label">Member Any Party</div>
+	                    <div class="col-lg-8 col-md-8">{{$member->party}}</div>
+	                  </div>
 
-	                    <div class="row mb-3">
-	                      <label for="Instagram" class="col-md-4 col-lg-3 col-form-label">Instagram Profile</label>
-	                      <div class="col-md-8 col-lg-9">
-	                        <input name="instagram" type="text" class="form-control" id="Instagram" value="https://instagram.com/#">
-	                      </div>
-	                    </div>
+	                   <div class="row">
+	                    <div class="col-lg-4 col-md-4 label">Date Joined The Party</div>
+	                    <div class="col-lg-8 col-md-8">{{$member->date_party}}</div>
+	                  </div>
 
-	                    <div class="row mb-3">
-	                      <label for="Linkedin" class="col-md-4 col-lg-3 col-form-label">Linkedin Profile</label>
-	                      <div class="col-md-8 col-lg-9">
-	                        <input name="linkedin" type="text" class="form-control" id="Linkedin" value="https://linkedin.com/#">
-	                      </div>
-	                    </div>
+	                   <div class="row">
+	                    <div class="col-lg-4 col-md-4 label">survival and affiliation?</div>
+	                    <div class="col-lg-8 col-md-8">{{$member->survive}}</div>
+	                  </div>
 
-	                    <div class="text-center">
-	                      <button type="submit" class="btn btn-primary">Save Changes</button>
-	                    </div>
-	                  </form><!-- End Profile Edit Form -->
+	                   <div class="row">
+	                    <div class="col-lg-4 col-md-4 label">Date of departure or resignation?</div>
+	                    <div class="col-lg-8 col-md-8">{{$member->date_resign}}</div>
+	                  </div>
 
+	                   <div class="row">
+	                    <div class="col-lg-4 col-md-4 label">Reason for leaving or resigning?</div>
+	                    <div class="col-lg-8 col-md-8">{{$member->reason_leaving}}</div>
+	                  </div>
+
+	                   <div class="row">
+	                    <div class="col-lg-4 col-md-4 label">Why did you choose to join the Broad Masses Base?</div>
+	                    <div class="col-lg-8 col-md-8">{{$member->reason_join}}</div>
+	                  </div>
+
+	                   <div class="row">
+	                    <div class="col-lg-4 col-md-4 label">Do you have anything to offer to develop this entity? </div>
+	                    <div class="col-lg-8 col-md-8">{{$member->offer}}</div>
+	                  </div>
+
+	                   <div class="row">
+	                    <div class="col-lg-4 col-md-4 label">Ideas that can support the mass base in the present and the future? </div>
+	                    <div class="col-lg-8 col-md-8">{{$member->ideas}}</div>
+	                  </div>
+
+	                   <div class="row">
+	                    <div class="col-lg-4 col-md-4 label">About The Member? </div>
+	                    <div class="col-lg-8 col-md-8">{{$member->yourself}}</div>
+	                  </div>
+
+	                </div>
+	                <div class="tab-pane fade profile-overview" id="profile-approve">
+	                  <h5 class="card-title">Approve Member</h5>
+	                  	<a href="{{route('admin.approve', $member->user->id)}}" class="btn btn-primary btn-block"><i class="bi bi-check-circle"></i> Approve Membership</a>
 	                </div>
 
 	              </div><!-- End Bordered Tabs -->

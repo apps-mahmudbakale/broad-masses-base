@@ -10,13 +10,15 @@
 ">
           <nav id="navbar" class="navbar">
         <ul style="color: white; font-weight: 700;">
-          <li style="margin-right: 450px"><img src="{{asset('img/flag.png')}}" alt="" width="100" height="50"></li>
+          <li style="margin-right: 100px"><img src="{{asset('img/flag.png')}}" alt="" width="100" height="50"></li>
           <li><i class="fa fa-phone-square"></i> Hotline: 090668888866</li>
-        <li><a href="#" class="twitter"><i class="bx bxl-twitter"></i></a></li>
-        <li><a href="#" class="facebook"><i class="bx bxl-facebook"></i></a></li>
-        <li><a href="#" class="instagram"><i class="bx bxl-instagram"></i></a></li>
-        <li><a href="#" class="google-plus"><i class="bx bxl-skype"></i></a></li>
-        <li><a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a></li>
+        <li><a href="https://twitter.com/BMB16857801?t=eR1s7rJLEK2irgq0R_qRqQ&s=09" class="twitter"><i class="bx bxl-twitter"></i>Twitter</a></li>
+        <li><a href="https://www.facebook.com/%D8%A7%D9%84%D9%82%D8%A7%D8%B9%D8%AF%D8%A9-%D8%A7%D9%84%D8%AC%D9%85%D8%A7%D9%87%D9%8A%D8%B1%D9%8A%D8%A9-%D8%A7%D9%84%D8%B9%D8%B1%D9%8A%D8%B6%D8%A9-BMB-101840305631165/" class="facebook"><i class="bx bxl-facebook"></i>Facebook</a></li>
+        <li><a href="#" class="instagram"><i class="bx bxl-instagram"></i>Instagram</a></li>
+       {{--  <li><a href="#" class="google-plus"><i class="bx bxl-skype"></i></a></li>
+        <li><a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a></li> --}}
+       <li style="margin-left: 20px;"><a href="{{route('register')}}" class="btn btn-danger btn-get-started">Membership</a></li>
+        <li style="margin-left: 20px;"><a href="" class="btn btn-danger btn-get-started">Contribute</a></li>
         </ul>
           </nav><!-- .navbar -->
 
@@ -27,9 +29,6 @@
           <div data-aos="zoom-out">
             <h1>HOPE <span>FOR OUR LAND</span></h1>
             <h2 style="text-align: justify; font-family: Georgia, serif;">The broad mass base is an integrative revolutionary social-political entity; it is based on institutional, normative, national, programmatic, and modernity in discourse, practice, and behavior. It is governed by principles, values and constitution, and a well-established scientific methodology.</h2>
-            <div class="text-center text-lg-start">
-              <a href="{{route('register')}}" class="btn-get-started scrollto">Join Us</a>
-            </div>
           </div>
         </div>
         <div class="col-lg-4 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="300">
@@ -101,88 +100,88 @@
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
-              <a href="assets/img/gallery/gallery-1.jpg" class="gallery-lightbox">
-                <img src="assets/img/gallery/gallery-1.jpg" alt="" class="img-fluid">
+              <a href="img/gallery/gallery-1.jpg" class="gallery-lightbox">
+                <img src="img/gallery/gallery-1.jpg" alt="" class="img-fluid">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item" data-aos="zoom-in" data-aos-delay="150">
-              <a href="assets/img/gallery/gallery-2.jpg" class="gallery-lightbox">
-                <img src="assets/img/gallery/gallery-2.jpg" alt="" class="img-fluid">
+              <a href="img/gallery/gallery-2.jpg" class="gallery-lightbox">
+                <img src="img/gallery/gallery-2.jpg" alt="" class="img-fluid">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
-              <a href="assets/img/gallery/gallery-3.jpg" class="gallery-lightbox">
-                <img src="assets/img/gallery/gallery-3.jpg" alt="" class="img-fluid">
+              <a href="img/gallery/gallery-3.jpg" class="gallery-lightbox">
+                <img src="img/gallery/gallery-3.jpg" alt="" class="img-fluid">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item" data-aos="zoom-in" data-aos-delay="250">
-              <a href="assets/img/gallery/gallery-4.jpg" class="gallery-lightbox">
-                <img src="assets/img/gallery/gallery-4.jpg" alt="" class="img-fluid">
+              <a href="img/gallery/gallery-4.jpg" class="gallery-lightbox">
+                <img src="img/gallery/gallery-4.jpg" alt="" class="img-fluid">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
-              <a href="assets/img/gallery/gallery-5.jpg" class="gallery-lightbox">
-                <img src="assets/img/gallery/gallery-5.jpg" alt="" class="img-fluid">
+              <a href="img/gallery/gallery-5.jpg" class="gallery-lightbox">
+                <img src="img/gallery/gallery-5.jpg" alt="" class="img-fluid">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item" data-aos="zoom-in" data-aos-delay="350">
-              <a href="assets/img/gallery/gallery-6.jpg" class="gallery-lightbox">
-                <img src="assets/img/gallery/gallery-6.jpg" alt="" class="img-fluid">
+              <a href="img/gallery/gallery-6.jpg" class="gallery-lightbox">
+                <img src="img/gallery/gallery-6.jpg" alt="" class="img-fluid">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
-              <a href="assets/img/gallery/gallery-7.jpg" class="gallery-lightbox">
-                <img src="assets/img/gallery/gallery-7.jpg" alt="" class="img-fluid">
+              <a href="img/gallery/gallery-7.jpg" class="gallery-lightbox">
+                <img src="img/gallery/gallery-7.jpg" alt="" class="img-fluid">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item" data-aos="zoom-in" data-aos-delay="450">
-              <a href="assets/img/gallery/gallery-8.jpg" class="gallery-lightbox">
-                <img src="assets/img/gallery/gallery-8.jpg" alt="" class="img-fluid">
+              <a href="img/gallery/gallery-8.jpg" class="gallery-lightbox">
+                <img src="img/gallery/gallery-8.jpg" alt="" class="img-fluid">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item" data-aos="zoom-in" data-aos-delay="450">
-              <a href="assets/img/gallery/gallery-9.jpg" class="gallery-lightbox">
-                <img src="assets/img/gallery/gallery-9.jpg" alt="" class="img-fluid">
+              <a href="img/gallery/gallery-9.jpg" class="gallery-lightbox">
+                <img src="img/gallery/gallery-9.jpg" alt="" class="img-fluid">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item" data-aos="zoom-in" data-aos-delay="450">
-              <a href="assets/img/gallery/gallery-10.jpg" class="gallery-lightbox">
-                <img src="assets/img/gallery/gallery-10.jpg" alt="" class="img-fluid">
+              <a href="img/gallery/gallery-10.jpg" class="gallery-lightbox">
+                <img src="img/gallery/gallery-10.jpg" alt="" class="img-fluid">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item" data-aos="zoom-in" data-aos-delay="450">
-              <a href="assets/img/gallery/gallery-11.jpg" class="gallery-lightbox">
-                <img src="assets/img/gallery/gallery-11.jpg" alt="" class="img-fluid">
+              <a href="img/gallery/gallery-11.jpg" class="gallery-lightbox">
+                <img src="img/gallery/gallery-11.jpg" alt="" class="img-fluid">
               </a>
             </div>
           </div>

@@ -50,7 +50,10 @@ class MemberController extends Controller
      */
     public function show(Member $member)
     {
-        //
+        $this->authorize('read-members');
+
+        return view('members.show', compact('member'));
+
     }
 
     /**
@@ -84,6 +87,10 @@ class MemberController extends Controller
      */
     public function destroy(Member $member)
     {
-        //
+        $this->authorize('delete-members');
+
+        $member->delete();
+
+        return back()->with('success', 'Member Deleted');
     }
 }

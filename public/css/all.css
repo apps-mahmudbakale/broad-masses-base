@@ -4127,10 +4127,10 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 50px;
   transition: 0.5s;
   color: #fff;
-  background: #1acc8d;
+  background: #dc3545;
 }
 #hero .btn-get-started:hover {
-  background: #17b57d;
+  background: #dc3545;
 }
 #hero .animated {
   animation: up-down 2s ease-in-out infinite alternate-reverse both;

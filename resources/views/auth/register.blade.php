@@ -25,25 +25,32 @@
         @include('partials.reg_success')
       @else
       <p style="text-align: justify;">
-       Dear Sudanese citizen,  Hello and welcome to the Broad Masses Base, your political incubator , social and cultural incubator towards aspiring to chart and sign a true democratic modern future to build a democratic homeland that accommodates everyone enjoying security, peace, stability, freedom, justice, prosperity, development and leadership.Dear citizen, before filling out the registration form, make sure that you read the conditions of registration and joining carefully: <input type="checkbox" id="terms"> <a href="{{route('terms')}}">Terms & Conditions</a>
+       Dear Sudanese citizen,  Hello and welcome to the Broad Masses Base, your political incubator , social and cultural incubator towards aspiring to chart and sign a true democratic modern future to build a democratic homeland that accommodates everyone enjoying security, peace, stability, freedom, justice, prosperity, development and leadership.Dear citizen, before filling out the registration form, make sure that you read the conditions of registration and joining carefully
     </p>
       <hr>
+      @if ($errors->count())
+             <div class="alert alert-danger">
+                 @foreach ($errors->all() as $error)
+                 <p><i class="fa fa-question-circle"></i>  {{ $error }}</p>
+                 @endforeach
+             </div>
+      @endif
       <form action="{{ route('register.store') }}" method="POST" class="row">
         @csrf
         <div class="col-md-6">
-          Full Name
+          Full Name <span style="color: red;">*</span>
           <input type="text" name="fullname" class="form-control">
         </div>
         <div class="col-md-6">
-          Date of Birth
+          Date of Birth <span style="color: red;">*</span>
           <input type="date" name="date_of_birth" class="form-control">
         </div>
         <div class="col-md-6">
-          Place of Birth
+          Place of Birth <span style="color: red;">*</span>
           <input type="text" name="place_of_birth" class="form-control">
         </div>
         <div class="col-md-6">
-           National ID/Passport No
+           National ID/Passport No <span style="color: red;">*</span>
            <input type="text" name="passport_no" class="form-control">
         </div>
         <div class="col-md-6">
@@ -63,15 +70,15 @@
           <input type="text" name="fixed_phone" class="form-control">
         </div>
         <div class="col-md-6">
-          Mobile Phone
+          Mobile Phone <span style="color: red;">*</span>
           <input type="text" name="phone" class="form-control">
         </div>
         <div class="col-md-6">
-          Email
+          Email <span style="color: red;">*</span>
           <input type="email" name="email" class="form-control">
         </div>
         <div class="col-md-6">
-          Current Residence
+          Current Residence <span style="color: red;">*</span>
           <textarea name="current_residence" id="" cols="30" rows="10" class="form-control"></textarea>
         </div>
         <div class="col-md-6">
@@ -148,9 +155,21 @@
         </div>
         <div class="col-md-12">
           Acknowledgment:-
-          I’m the owner of the above statements, acknowledge and agree to my joining the broad Masses base 
+          I’m the owner of the above statements, acknowledge and agree to my joining the broad Masses base <span style="color: red;">*</span>
           <input type="text" name="acknowledgement" class="form-control">
         </div>
+        <div class="col-md-3">
+          <p></p>
+          <input type="checkbox" name="terms" id="terms"> <a href="{{route('terms')}}">  Agree with Terms & Conditions <span style="color: red;">*</span></a>
+        </div>
+         <div class="col-md-3">
+          <p></p>
+          <input type="checkbox" name="constitution" id="constitution"> <a href="{{route('terms')}}">Constitutional Terms <span style="color: red;">*</span></a>
+        </div>
+         {{-- <div class="col-md-3">
+          <p></p>
+          <input type="checkbox" id="terms"> <a href="{{route('terms')}}">Terms & Conditions</a>
+        </div> --}}
         <div class="col-md-12">
           <br>
           <button type="submit" class="btn btn-success">Register</button>

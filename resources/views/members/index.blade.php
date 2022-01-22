@@ -51,8 +51,8 @@
 	                  	<a href="{{route('admin.members.edit', $member->id)}}" class="btn btn-primary"><i class="bi bi-pencil-square"></i></a>
 	                  	@endcan
 	                  	@can('delete-members')
-	                  	<a href="" class="btn btn-danger" onclick="event.preventDefault(); document.getElementById('del#{{$user->id}}').submit();"><i class="bi bi-trash"></i></a>
-	                  	<form id="del#{{$user->id}}" action="{{ route('admin.members.destroy', $user->id) }}" method="POST" onsubmit="return confirm('Are you sure');" style="display: inline-block;">
+	                  	<a href="" class="btn btn-danger" onclick="event.preventDefault(); document.getElementById('del#{{$member->id}}').submit();"><i class="bi bi-trash"></i></a>
+	                  	<form id="del#{{$member->id}}" action="{{ route('admin.members.destroy', $member->id) }}" method="POST" onsubmit="return confirm('Are you sure');" style="display: inline-block;">
                           <input type="hidden" name="_method" value="DELETE">
                           <input type="hidden" name="_token" value="{{ csrf_token() }}">
                       </form>

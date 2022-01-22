@@ -7,7 +7,10 @@ use App\Http\Requests\UserUpdateFormRequest;
 use App\Models\Member;
 use App\Models\Role;
 use App\Models\User;
+use App\Mail\WelcomeMail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use Validator;
 
 class UserController extends Controller
 {
@@ -53,6 +56,30 @@ class UserController extends Controller
 
     public function register(Request $request)
     {
+        $rules = array(
+        'fullname' => 'required',                        
+        'email' => 'required|email|unique:users',    
+        'date_of_birth' => 'required',
+        'place_of_birth' => 'required',
+        'passport_no' => 'required',
+        'phone' => 'required',
+        'current_residence' => 'required',
+        'yourself' => 'required',
+        'acknowledgement' => 'required',
+        'terms' => 'required',
+        'constitution' => 'required'
+    );
+
+        $validator = Validator::make($request->all(), $rules);
+
+        if ($validator->fails()) {
+            
+            $messages = $validator->messages();
+
+            return back()->withErrors($validator);
+
+        }else{
+
         $user = User::create([
                 'name' => $request->fullname,
                 'email' => $request->email
@@ -88,20 +115,20 @@ class UserController extends Controller
                 'acknowledgement' => $request->acknowledgement
         ]);
 
-        return redirect('/reg_mail.php?mail='.$request->email);
+        Mail::to($request->email)->send(new WelcomeMail());
+        return redirect()->route('register')->with('success', 'success');
 
+        }
         
     }
 
-    public function sendmail($value='')
+    public function approve($id)
     {
-        return redirect()->route('register')->with('success');
-    }
+        $user = User::find($id);
 
+        
 
-    public function reg_mail_failed()
-    {
-        return redirect()->route('register')->with('success');
+        dd($user->email);
     }
 
     /**
@@ -152,6 +179,7 @@ class UserController extends Controller
 
         return redirect()->route('admin.users.index')->with('User Updated');
     }
+
 
     /**
      * Remove the specified resource from storage.
