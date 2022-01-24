@@ -9,7 +9,7 @@
 	    <nav>
 	      <ol class="breadcrumb">
 	        <li class="breadcrumb-item"><a href="{{route('admin.dashboard')}}">Dashboard</a></li>
-	        <li class="breadcrumb-item"><a href="{{route('admin.users.index')}}">UMember</a></li>
+	        <li class="breadcrumb-item"><a href="{{route('admin.members.index')}}">Members</a></li>
 	        <li class="breadcrumb-item active">View Member</li>
 	      </ol>
 	    </nav>
@@ -49,9 +49,11 @@
 	                <li class="nav-item">
 	                  <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-edit">Other Details</button>
 	                </li>
+	                @if(!$member->user->password)
 	                <li class="nav-item">
 	                  <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-approve">Approve Member</button>
 	                </li>
+	                @endif
 	              </ul>
 	              <div class="tab-content pt-2">
 

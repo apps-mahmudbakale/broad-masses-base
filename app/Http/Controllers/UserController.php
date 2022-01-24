@@ -10,6 +10,7 @@ use App\Models\User;
 use App\Mail\WelcomeMail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Str;
 use Validator;
 
 class UserController extends Controller
@@ -126,9 +127,22 @@ class UserController extends Controller
     {
         $user = User::find($id);
 
-        
+        $pass = Str::random(6);
 
-        dd($user->email);
+        $user->password = bcrypt($pass);
+        
+        $user->update();
+
+        $member = [
+            'name' => $user->name,
+            'email' => $user->email,
+            'password' => $pass,
+        ];
+
+        Mail::to($user->email)->send(new WelcomeMail($member));
+
+        return redirect()->route('admin.members.index');    
+
     }
 
     /**
