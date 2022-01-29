@@ -24,6 +24,12 @@
 	            @can('create-users')
 	            <a href="{{route('admin.users.create')}}" class="btn btn-primary pull-right"><i class="bi bi-plus"></i> Create User</a>
 	            @endcan
+	            <p></p>
+	            @if(Session::has('success'))
+	           		<div class="alert alert-success">
+	           			{{Session::get('success')}}
+	           		</div>
+	            @endif
 	            <!-- Table with stripped rows -->
 	            <table class="table datatable">
 	              <thead>

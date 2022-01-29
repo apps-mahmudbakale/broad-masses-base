@@ -16,7 +16,7 @@ class ApproveMail extends Mailable
      *
      * @return void
      */
-    public $member;
+    // public $member;
     public function __construct($member)
     {
         $this->member = $member;
@@ -29,6 +29,6 @@ class ApproveMail extends Mailable
      */
     public function build()
     {
-        return $this->markdown('mail.approve-mail');
+        return $this->markdown('mail.approve-mail')->with('member', $this->member);
     }
 }

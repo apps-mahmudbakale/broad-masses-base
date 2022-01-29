@@ -8,6 +8,7 @@ use App\Models\Member;
 use App\Models\Role;
 use App\Models\User;
 use App\Mail\WelcomeMail;
+use App\Mail\ApproveMail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Str;
@@ -139,9 +140,9 @@ class UserController extends Controller
             'password' => $pass,
         ];
 
-        Mail::to($user->email)->send(new WelcomeMail($member));
+        Mail::to($user->email)->send(new ApproveMail($member));
 
-        return redirect()->route('admin.members.index');    
+        return redirect()->route('admin.members.index')->with('success', 'Membership Approved');    
 
     }
 
@@ -174,7 +175,7 @@ class UserController extends Controller
 
         $user->load('roles');
 
-        return view('users.edit', compact('roles', $roles, 'user', $user));
+        return view('users.edit', compact('roles', 'user'));
     }
 
     /**
@@ -191,7 +192,7 @@ class UserController extends Controller
         $user->update($request->all());
         $user->roles()->sync($request->input('roles', []));
 
-        return redirect()->route('admin.users.index')->with('User Updated');
+        return redirect()->route('admin.users.index')->with('success','User Updated');
     }
 
 
