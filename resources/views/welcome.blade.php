@@ -29,6 +29,10 @@
           <div data-aos="zoom-out">
             <h1>HOPE <span>FOR OUR LAND</span></h1>
             <h2 style="text-align: justify; font-family: Georgia, serif;">The broad mass base is an integrative revolutionary social-political entity; it is based on institutional, normative, national, programmatic, and modernity in discourse, practice, and behavior. It is governed by principles, values and constitution, and a well-established scientific methodology.</h2>
+            <div class="text-center text-lg-left regButtons">
+             <a href="{{route('register')}}" class="btn btn-danger btn-get-started">Membership</a>
+             <a href="" class="btn btn-danger btn-get-started">Contribute</a>
+            </div>
           </div>
         </div>
         <div class="col-lg-4 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="300">
@@ -61,9 +65,12 @@
       <div class="container-fluid">
 
         <div class="row">
-          <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-stretch" data-aos="fade-right">
+          {{-- <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-stretch" data-aos="fade-right">
             <span class="video-box"></span>
-          </div>
+          </div> --}}
+          <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-stretch aos-init aos-animate" data-aos="fade-right">
+                   
+            </div>
 
           <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5" data-aos="fade-left">
             <h3>Who Are We?</h3>
@@ -83,7 +90,12 @@
 
           </div>
         </div>
-
+        <div class="row">
+          <div class="col-md-6">
+            <object data="http://www.youtube.com/embed/W7qWa52k-nE"
+               width="560" height="315"></object>
+          </div>
+        </div>
       </div>
     </section><!-- End About Section -->
 
