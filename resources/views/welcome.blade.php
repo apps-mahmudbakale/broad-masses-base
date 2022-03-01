@@ -91,9 +91,9 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-6">
-            <object data="http://www.youtube.com/embed/W7qWa52k-nE"
-               width="560" height="315"></object>
+          <div class="col-md-12">
+            <object data="{{asset('base_video.mp4')}}"
+               width="760" height="315"></object>
           </div>
         </div>
       </div>
